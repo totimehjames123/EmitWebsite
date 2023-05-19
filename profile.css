@@ -1,0 +1,191 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+header{
+    width: 100%;
+    height: 100px;
+    background: rgb(169, 243, 169);
+    box-shadow: 2px 4px 6px darkslategray;
+}
+header .logo{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: darkslategray;
+    font-size: 70px;
+    margin: 0;
+    margin-left: 50px;
+    cursor: pointer;
+    width: 20%;
+    padding: 0;
+}
+header .logo::first-letter{
+    color: green;
+    font-size: 50px;
+    font-family: cursive;
+}
+header h1{
+    float: left;
+}
+header h1.title{
+    font-size: 50px;
+    font-family: sans-serif;
+    font-weight: lighter;
+    position: absolute;
+    right: 50px;
+    margin-top: 15px;
+    color: darkslategray;
+}
+header h1.title i{
+    border-radius: 100%;
+    padding: 10px;
+    background: white;
+    font-size: 30px;
+    box-shadow: 2px 3px 5px darkslategray;
+}
+
+div.profile .profilepicture{
+    border-radius: 100%;
+    width: 450px;
+    height: 450px;
+    margin: 50px;
+    padding: 30px;
+    box-shadow: 2px 3px 6px darkslategray;
+}
+div.profilePictureBox, div.details{
+    float: left;
+    width: fit-content;
+}
+div.details{
+    margin: auto;
+    width: auto;
+    height: auto;
+    margin: 10px;
+    padding: 20px;
+    margin-right: 100px;
+}
+div.details p i{
+    margin-right: 50px;
+}
+div.details p{
+    text-align: left;
+    color: darkslategray;
+    padding: 0;
+    font-weight: lighter;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+div.details p.fullname{
+    font-size: 25px;
+    margin: 0;
+}
+div.details p.email{
+    font-size: 25px;
+    color: black;
+}
+div.details p.phoneNumber{
+    font-size: 25px;
+    color: green;
+}
+div.details p.dateOfBirth{
+    font-size: 25px;
+    color: blue;
+}
+div.details p.country{
+    font-size: 25px;
+    color: orangered;
+}
+div.details p.gender{
+    font-size: 25px;
+    color: darkslategray;
+}
+div.details p.gender i{
+    padding: 0;
+    margin-right: 30px;
+}
+div.details form .button{
+    width: 500px;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    background: green;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    color: white;
+    margin: 20px 0 0 0;
+    border-radius: 150px;
+}
+div.details form .button:hover{
+    opacity: 0.8;
+}
+
+
+/* Mobile Phone */
+@media screen and (max-width: 767px){
+
+    header .logo{
+        font-size: 50px;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+    header .logo::first-letter{
+        font-size: 40px;
+    }
+
+    header h1.title{
+        font-size: 30px;
+        margin-top: 30px;
+        margin-right: 0;
+        right: 10px;
+    }
+    header h1.title i{
+        padding: 5px;
+        font-size: 20px;
+        margin-right: 0;
+    }
+
+    div.profile{
+        display: grid;
+        height: auto;
+        overflow-x: hidden;
+     }
+    div.profilePictureBox , div.details{
+        clear: both;
+        width: 100%;
+        position: relative;
+        margin: auto;
+        text-align: center;
+    }
+    div.details{
+        width: 90%;
+    }
+    div.profile .profilepicture{
+        width: 60%;
+        height: 40vh;
+        margin: 0;
+        margin-top: 50px;
+    }
+
+    div.details form .button{
+        width: 80%;
+    }
+    
+    div.details p{
+        font-size: 20px;
+        width: 85%;
+        max-width: 85%;
+        word-wrap: break-word;
+        padding-left: 10%;
+        font-weight: lighter;
+    }
+    div.details p i{
+        margin-right: 5px;
+    }
+    .profileDescription{
+        font-size: 40px;
+    }
+    
+}
+
+
+

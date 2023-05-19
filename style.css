@@ -1,0 +1,80 @@
+body{
+    margin: 0;
+    background: url(get_started.png) no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+    width: 100%;
+    height: 100vh;
+}
+
+div.container{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    text-align: center;
+    overflow: hidden;
+}
+div.container .items{
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    top: 150px;
+    padding: 10px;
+}
+div.container .items h2{
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 60px;
+    font-weight: lighter;
+    font-size: 30px;
+}
+div.container .items h2 b{
+    font-size: 30px;
+}
+div.container .items h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: darkslategray;
+    font-size: 70px;
+    margin-top: 0;
+    cursor: pointer;
+}
+div.container .items button{
+    padding: 20px 60px 20px 60px;
+    font-weight: bold;
+    text-decoration: none;
+    background: none;
+    color: blueviolet;
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: blueviolet solid 3px;
+    border-radius: 6px;
+    transition: all 1s;
+}
+div.container .items button:hover{
+    background: blueviolet;
+    color: white;
+}
+div.container .items h1::first-letter{
+    color: green;
+    font-size: 50px;
+    font-family: cursive;
+}
+
+
+/* Mobile Phones */
+@media screen and (max-width: 767px){
+    div.container{
+        overflow: scroll;
+    }
+    div.container .items{
+        top: 100px;
+    }
+    div.container .items button{
+        padding: 10px 20px 10px 20px;
+    }
+    div.container .items h2{
+        font-size: 25px;
+    }
+    
+}

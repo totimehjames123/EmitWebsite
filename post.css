@@ -1,0 +1,483 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+*{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+header{
+    width: 100%;
+    height: 100px;
+    background: rgb(169, 243, 169);
+    box-shadow: 2px 4px 6px darkslategray;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+}
+
+header .logo{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: darkslategray;
+    font-size: 70px;
+    margin: 0;
+    cursor: pointer;
+    width: 200%;
+    padding: 0;
+}
+header .logo::first-letter{
+    color: green;
+    font-size: 50px;
+    font-family: cursive;
+}
+
+header .logo, header .create, header .search, header .profile{
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+header .search{
+    width: 25%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .create{
+    width: 15%;
+    padding-right: 10px;
+}
+/* Header buttons */
+header .create button{
+    width: 100%;
+    height: 50px;
+    border-radius: 50px;
+    background-color: green;
+    opacity: 0.7;
+    font-size: large;
+    color: white;
+    border: none;
+}
+header .create button:hover{
+    opacity: 0.5;
+}
+header .search input[type="search"]{
+    width: 100%;
+    height: 30px;
+    border: none;
+    font-size: large;
+    padding-left: 10px;
+    color: darkslategray;
+}
+header .search input[type="search"]:focus{
+    outline: none;
+}
+header .search input[type="search"]::placeholder{
+    color: green;
+}
+header .search div{
+    display: flex;
+    width: 220px;
+    padding: 10px;
+    border-radius: 12px;
+    background: white; 
+}
+header .search div i{
+    font-size: 20px;
+    padding: 5px 10px 0 0; 
+    color: green;
+}
+
+/* Hamburger menu */
+header .dropDown{
+    display: none;
+    width: 20%;
+    text-align: center;
+}
+header .dropDown button{
+    width: 30px;
+    height: 30px;
+    background: green;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0;
+}
+header .dropDown button:hover{
+    opacity: 0.8;
+}
+/* Profile Picture */
+header .profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .profile .profilepicture{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    padding: 5px;
+    box-shadow: 2px 3px 5px gray;
+}
+header .profile h1{
+    margin-right: 20px;
+    color: darkslategray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 25px;
+    text-shadow: 1px 2px 3px green;
+}
+header .profile h1, header .profile .profilepicture{
+    float: left;
+}
+
+/* Main body */
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: rgb(169, 243, 169);
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+aside.left, section.middle, aside.right{
+    margin: 150px  0 0 0;
+    padding: 0;
+    float: left;
+    width: 33%;
+    background:  rgb(169, 243, 169);;
+    height: 100vh;
+    /* overflow: hidden;  */
+
+}
+
+section.middle{
+    display: grid;
+    overflow: scroll;
+    height: 80vh;
+    position: fixed;
+    /* overflow: scroll; */
+    margin-bottom: 100px;
+}
+/* Editing user posts */
+section.middle .post-box{
+    width: 95%;
+    height: 500px;
+    max-height: 500px;
+    background: white;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 12px;
+    z-index: 2;
+    box-shadow: 2px 3px 6px 2px darkslategray;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: scroll;
+}
+section.middle .post-box:last-child{
+    margin-bottom: 100px;
+}
+
+section.middle .post-box .profileContainer{
+    width: 80%;
+    height: 150px;
+    max-height: 400px;
+    margin: auto;
+    word-wrap: break-word;
+}
+section.middle .post-box .fullNamePost{
+    width: auto;
+    float: left;
+    top: 6px;
+    margin-left: 10px;
+    color: green;
+    font-weight: lighter;
+    position: relative;
+}
+section.middle .post-box .profilePicturePost{
+    width: 50px;
+    height: 50px;
+    float: left;
+    text-align: center;
+    box-shadow: 2px 3px 4px 1px darkslategray;
+    border-radius: 100px;
+}
+section.middle .post-box .profilePicturePost img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+section.middle .post-box .imagePosted{
+    width: 100%;
+    margin: auto;
+    clear: both;
+    text-align: center; 
+}
+section.middle .post-box .imagePosted .post{
+    width: 100%;
+    height: 250px;
+    margin: 0;
+    border-radius: 10px;
+}
+
+section.middle .post-box .caption{
+    clear: both;
+    width: 250px;
+    height: 100px;
+    overflow-y: scroll;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 60px;
+    text-align: left;
+    font-weight: bolder;
+    word-wrap: break-word;
+    color: black;
+}
+
+aside.left form button{
+    position: absolute;
+    left: 0;
+    top: 50vh;
+    background: green;
+    color: white;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 120px;
+    height: 50px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    border-left: 10px white solid;
+    opacity: 0.8;
+    transition: width 2s, font-size 2s;
+} 
+aside.left button:hover{
+    opacity: 1;
+    width: 200px;
+    font-size: large;
+}
+/* Post Date Time */ 
+section.middle .post-box .postDateTime{
+    margin-top: 5px;
+    padding: 7px;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+/* Delete Button */
+section.middle .post-box div{
+    text-align: center;
+}
+section.middle .post-box .deletePost{
+    width: 200px;
+    height: 40px;
+    color: white;
+    background: red;
+    border-radius: 20px;
+    border: none;
+}
+section.middle .post-box .deletePost:hover{
+    opacity: 0.8;
+}
+
+/* Hamburger menu */
+header .dropDown{
+    display: none;
+    width: 20%;
+    text-align: center;
+}
+header .dropDown button{
+    width: 30px;
+    height: 30px;
+    background: green;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0;
+}
+header .buttonSee{
+    display: none;
+}
+
+
+/* MobilePhones */
+@media screen and (max-width: 767px){
+    header{
+        height: 60px;
+        padding-left: 0;
+    }
+    header .logo{
+        font-size: 40px;
+        position: relative;
+        left: 0px;
+        width: 40%;
+        margin: 0;
+        text-align: left;
+    }
+    header .logo::first-letter{
+        font-size: 30px;
+    }
+    header .profile{
+        font-size: 50px;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 40%;
+        text-align: right;
+        text-align: right;
+    }
+    header .profile h1{
+        font-size: 20px;
+        margin: 0;
+        margin-right: 0;
+        word-wrap: break-word;
+        
+    }
+    header .profile .profilepicture{
+        height: 30px;
+        width: 30px;
+        padding: 2px;
+    }
+
+    header .create, header .search{
+        display: none;
+    }
+    
+    header .dropDown{
+        display: block;
+        width: 50px;
+        text-align: center;
+    }
+    header .create{
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        padding: 0;
+        display: none;
+    }
+    header .create button{
+        width: 100%;
+        margin: 0 auto;
+        
+    }
+    header .search{
+        position: absolute;
+        top: 110px;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+    }
+    header .search div{
+        border-radius: 0;
+        margin: auto;
+        width: 100%;
+    }
+    header .create button, header .search input{
+        border-radius: 0;
+    }
+
+    header .buttonSee{
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 12vh;
+        background: green;
+        color: white;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        width: 120px;
+        height: 50px;
+        border: none;
+        font-family: Arial, Helvetica, sans-serif;
+        border-left: 10px white solid;
+        opacity: 0.8;
+        transition: width 2s, font-size 2s;
+    } 
+    header .buttonSee:hover{
+        opacity: 1;
+        width: 200px;
+        font-size: large;
+    }
+
+
+    /* Main */
+
+    main{
+        width: 100%;
+        padding: 0;
+        height: 120vh;
+        margin: 0;
+    }
+    main section.middle{
+        width: 90%;
+        margin: -90px  0 0 0;
+        /*overflow: scroll;*/
+    }
+    aside.left, aside.right{
+        display: none;
+        /*margin-top: 5px;*/
+    }
+
+    section.middle .post-box .deletePost{
+        width: 90%;
+        border-radius: 10px;
+    }
+    section.middle .post-box{
+        overflow: hidden;
+        padding-bottom: 10px;
+        margin-top: 5px;
+    }
+    section.middle .post-box .caption{
+        width: 95%;
+        margin-left: 0;
+        
+    }
+    
+    section.middle .post-box .profilePicturePost{
+        width: 35px;
+        height: 35px;
+        float: left;
+        text-align: center;
+        box-shadow: 2px 3px 4px 1px darkslategray;
+        border-radius: 100px;
+    }
+    section.middle .post-box .profilePicturePost img{
+        width: 35px;
+        height: 35px;
+        border-radius: 100%;
+    }
+    section.middle .post-box .fullNamePost{
+        width: auto;
+        float: left;
+        top: 6px;
+        margin-left: 10px;
+        color: green;
+        font-weight: lighter;
+        position: relative;
+        font-size: 18px;
+    
+    }
+    section.middle .post-box .caption{
+        width: 95%;
+        margin-left: 0;
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
+
+
+

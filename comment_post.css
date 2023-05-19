@@ -1,0 +1,361 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+*::-webkit-scrollbar{
+    display: none;
+}
+*{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+header{
+    width: 100%;
+    height: 100px;
+    background: rgb(169, 243, 169);
+    box-shadow: 2px 4px 6px darkslategray;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+}
+header .logo, header .create, header .search, header .profile{
+    width: 25%;
+    float: left;
+    
+}
+header .logo{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    color: darkslategray;
+    font-size: 70px;
+    margin: 0;
+    cursor: pointer;
+    width: 200%;
+    padding: 0;
+    padding-left: 2%;
+    width: 20%;
+    text-align: left;
+}
+header .logo::first-letter{
+    color: green;
+    font-size: 50px;
+    font-family: cursive;
+}
+
+
+header form{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .search{
+    width: 60%;
+    text-align: center;
+    text-align: left;
+}
+header .create{
+    width: 30%;
+    border: none;
+}
+/* Header buttons */
+header .create button{
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    background: green;
+    font-size: large;
+    color: white;
+    border: none;
+}
+header .create button:hover{
+    opacity: 0.5;
+}
+header .search input[type="text"]{
+    width: 100%;
+    height: 30px;
+    border: none;
+    font-size: large;
+    padding-left: 10px;
+    color: darkslategray;
+}
+header .search input[type="text"]:focus{
+    outline: none;
+}
+header .search input[type="text"]::placeholder{
+    color: green;
+}
+header .search div{
+    display: flex;
+    width: 90%;
+    padding: 10px;
+    border-radius: 12px;
+    background: white; 
+}
+header .search div i{
+    font-size: 20px;
+    padding: 5px 10px 0 0; 
+    color: green;
+}
+
+/* Profile Picture */
+header .profile{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    text-align: right;
+    position: relative;
+    right: 0px;
+    padding-right: 2%;
+}
+header .profile .profilepicture{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    padding: 5px;
+    box-shadow: 2px 3px 5px gray;
+}
+header .profile h1{
+    margin-right: 20px;
+    color: darkslategray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+    font-size: 25px;
+    text-shadow: 1px 2px 3px green;
+}
+header .profile h1, header .profile .profilepicture{
+    float: left;
+}
+
+/* Main body */
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: rgb(169, 243, 169);
+    height: 100vh;
+    overflow: hidden;
+    z-index: 2;
+}
+aside.left, section.middle, aside.right{
+    margin: 150px  0 0 0;
+    padding: 0;
+    float: left;
+    width: 33%;
+    background:  rgb(169, 243, 169);;
+    height: 100vh;
+
+}
+
+section.middle{
+    margin-top: 200px;
+    overflow: scroll;
+    height: 80vh;
+    margin-bottom: 100px;
+}
+
+/* aside */
+aside.left  button{
+    position: absolute;
+    left: 0;
+    top: 50vh;
+    background: green;
+    color: white;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    width: 120px;
+    height: 50px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    border-left: 10px white solid;
+    opacity: 0.8;
+    transition: width 2s, font-size 2s;
+} 
+aside.left button:hover{
+    opacity: 1;
+    width: 200px;
+    font-size: large;
+}
+
+/* Commnent Box */
+section.middle{
+    width: 33%;
+}
+section.middle  .commentBox{
+    width: 85%;
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 20px;
+}
+
+section.middle  .commentBox .profilePictureComment,
+section.middle  .commentBox .fullNameComment{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.middle  .commentBox .profilePictureComment{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin: 0;
+}
+section.middle  .commentBox .profilePictureComment img{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+section.middle  .commentBox .fullNameComment{
+    width: 80%;
+    font-size: 20px;
+    margin: 0;
+    position: relative;
+    left: 10px;
+}
+section.middle  .commentBox .comment{
+    width: 90%;
+    height: 100px;
+    max-width: 100%;
+    max-height: 100px;
+    clear: both;
+    padding: 10px;
+    word-break: break-word;
+    overflow-y: scroll;
+    text-align: left;
+    
+}
+section.middle .postId{
+    width: 50px;
+    font-size: 15px;
+    float: right;
+    margin: 0px;
+}
+section.middle .commentDateTime{
+    font-size: 15px;
+    width: 80%;
+   
+}
+.back-arrow{
+    display: none;
+}
+
+
+/* Mobile Phones */
+@media screen and (max-width: 767px){
+    body{
+        box-sizing: border-box;
+    }
+    header{
+        width: 100%;
+        height: 60px;
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+
+    header .logo{
+        font-size: 40px;
+        padding: 5px;
+    }
+    header .logo::first-letter{
+        font-size: 30px;
+    }
+    header .profile{
+        position: absolute;
+        right: 0;
+    }
+    header .profile h1{
+        display: none;
+    } 
+    header .profile .profilepicture{
+        position: relative;
+        right: 0;
+        width: 50px;
+        height: 50px;
+        padding: 2px;
+    }
+
+    header form{
+        position: absolute;
+        top: 60px;
+        width: 100%;
+        clear: both;
+        padding: 0;
+        display: block;
+    }
+    header form .create, header form .search{
+        width: 100%;
+    }
+    header form .search{
+        width: 100%;
+    }
+    header .search input[type="text"]{
+        width: 100%;
+    }
+    header form .search div{
+        width: 100%;
+        border-radius: 0;
+    }
+    header form .create button{
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+    }
+    main{
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        margin: auto 0;
+        overflow-x: hidden;
+    }
+    main section.middle{
+        width: 100%;
+        overflow-x: hidden;
+        overflow: scroll;
+        position: relative;
+        top: 110px;
+        margin: 0;
+        padding-bottom: 50px;
+        padding-top: 10px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    aside.left, aside.right{
+        display: none;
+    }
+
+    main section.middle .commentBox{
+        width: 80%;
+        margin: auto;
+        margin-bottom: 5px;
+    }
+    .back-arrow{
+        display: block;
+        color: white;
+        background: green;
+        position: absolute;
+        top: -50px;
+        left: 45%;
+        border: none;
+        width: 40px;
+        height: 40px;
+    }
+} 
+
+/* Tablets */
+@media screen and (max-width: 767px) and (max-width: 767px){
+
+}
+

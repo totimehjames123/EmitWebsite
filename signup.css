@@ -1,0 +1,146 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    margin: 0;
+    opacity: 0.8;
+    width: 100%;
+    overflow: scroll;
+}
+div.container{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background: url(get_started.png) no-repeat fixed;
+    background-size: cover;
+    overflow: hidden;
+    position: fixed;
+}
+div.container .items{
+    height: 70vh;
+    background: none;
+    opacity: 0.9;
+    margin: auto;
+    width: 30%;
+    position: relative;
+    padding: 30px;
+    background: black;
+    opacity: 0.9;
+    border-radius: 20px;
+    box-shadow: 2px 4px 6px black;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    top: 70px;
+}
+div.container .items::-webkit-scrollbar{
+    display: none;
+}
+
+div.container .items form.signup{
+    margin: auto;
+    text-align: center;   
+}
+div.container .items form.signup h1{
+    color: white;
+
+}
+label{
+    color: white;
+}
+div.container .items p{
+    color: black;
+}
+
+div.container .items form.signup input[type="file"]::-webkit-file-upload-button{
+    background: green;
+    border: none;
+    margin-top: -8px;
+    margin-left: -8px;
+    padding: 10px;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    color: white;
+}
+div.container .items form.signup input[type="file"]::-webkit-textfield-decoration-container{
+    color: red;
+}
+div.container .items form.signup input[type="file"]::-webkit-file-upload-button:hover{
+    opacity: 0.7;
+}
+
+/* Sign Up */
+div.container .items form.signup .typed{
+    margin: 20px 0 20px 0;
+    padding: 10px;
+    width: 300px;
+    height: 20px;
+    border-radius: 15px;
+    border: none;
+}
+div.container .items form.signup .gender{
+    width: 20px;
+    height: 20px;
+}
+div.container .items form.signup p label{
+    margin: 10px;
+}
+
+/* Buttons */
+div.container .items form.signup button{
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 15px;
+    margin: 7px;
+    border: solid 2px white;
+}
+div.container .items form.signup button.submit{
+    color: white;
+    background-color: blue;
+}
+
+div.container .items form.signup button.reset{
+    color: white;
+    background-color: red;
+}
+div.container .items form.signup button:hover{
+    opacity: 0.6;
+}
+
+/* Mobile Phones */
+@media screen and (max-width: 767px){
+    div.container{
+        width: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    div.container .items{
+        position: absolute;
+        top: 10px;
+        width: 80%;
+        z-index: 2;
+        height: 80vh;
+        overflow-x: hidden;
+    }
+    /* Buttons */
+    div.container .items form.signup button{
+        width: 90%;
+        height: 40px;
+    }
+    
+    /* Sign Up */
+    div.container .items form.signup .typed{
+        width: 80%;
+        height: 20px;
+    }
+    div.container .items form.signup .gender{
+        width: auto;
+    }
+    div.container .items form.signup p label{
+        margin: 0;
+        padding: 0;
+    }
+}
